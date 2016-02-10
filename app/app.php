@@ -17,6 +17,12 @@
         return $app['twig']->render('places.html.twig', array('places' => Place::getAll()));
     });
 
+    $app->post("/places", function() use ($app) {
+        $new_city = new Place($_POST['city']);
+        $new_city->save();
+        return $app['twig']->render('create_place.html.twig', array('newPlace' => $new_city));
+    });
+
 
     return $app;
 
