@@ -2,10 +2,16 @@
 class Place
 {
     private $city;
+    private $photo;
+    private $landmark;
+    private $date;
 
-    function __construct($place_city)
+    function __construct($place_city, $place_photo, $place_landmark, $place_date)
     {
         $this->city = $place_city;
+        $this->photo = $place_photo;
+        $this->landmark = $place_landmark;
+        $this->date = $place_date;
     }
 
 
@@ -17,6 +23,21 @@ class Place
     function getCity()
     {
         return $this->city;
+    }
+
+    function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    function getLandmark()
+    {
+        return $this->landmark;
+    }
+
+    function getDate()
+    {
+        return $this->date;
     }
 
     function save()
