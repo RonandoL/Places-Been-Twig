@@ -3,8 +3,11 @@ class Place
 {
     private $city;
 
-    function __construct($place_city);
-    $this->city = $place_city;
+    function __construct($place_city)
+    {
+        $this->city = $place_city;
+    }
+
 
     function setCity($new_city)
     {
