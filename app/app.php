@@ -23,6 +23,12 @@
         return $app['twig']->render('create_place.html.twig', array('newPlace' => $new_city));
     });
 
+    $app->post("/delete_places", function() use ($app) {
+        Place::deleteAll();
+
+        return $app['twig']->render('delete_places.html.twig');
+    });
+
 
     return $app;
 
