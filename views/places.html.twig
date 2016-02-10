@@ -1,6 +1,6 @@
 <html>
     <head>
-
+        <link rel="stylesheet" href="css/styles.css">
         <title>Places you've been</title>
     </head>
     <body>
@@ -9,6 +9,11 @@
             <ul>
                 {% for place in places %}
                     <li>{{ place.getCity }}</li>
+                    <li><img src="{{ place.getPhoto }}" alt=""/></li>
+                    <ul>
+                        <li>{{ place.getLandmark }}</li>
+                        <li>{{ place.getDate }}</li>
+                    </ul>
                 {% endfor %}
             </ul>
         {% endif %}
