@@ -1,15 +1,18 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
         <title>Places you've been</title>
     </head>
     <body>
-        <h1>Here is the place you just created:</h1>
-        <p>{{ newPlace.getCity }}</p>
-        <p><img src="{{ newPlace.getPhoto }}" alt=""/></p>
-        <p>{{ newPlace.getLandmark }}</p>
-        <p>{{ newPlace.getDate }}</p>
-        <p><a href="/">View your list of places visited</a></p>
+        <div class="container">
+          <h1>Here is the place you just created:</h1>
+          <h3>{{ newPlace.getCity }}</h3>
+          <p><img src="{{ newPlace.getPhoto }}" alt=""/></p>
+          <p><strong>Landmark: </strong>{{ newPlace.getLandmark }}</p>
+          <p><strong>Date visited: </strong>{{ newPlace.getDate }}</p>
+          <p><a href="/">View your list of places visited</a></p>
+        </div>
 
     </body>
 </html>
